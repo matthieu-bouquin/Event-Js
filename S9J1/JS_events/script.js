@@ -102,9 +102,9 @@ function previousBtn() {
     let nextBtn = document.querySelector("main").querySelector("a.btn.btn-primary");
     nextBtn.addEventListener("click", () => {
         let cards = document.querySelectorAll(".col-md-4");
+        let lastCard = cards[cards.length - 1];
         let firstCard = cards[0];
         let parent = firstCard.parentNode;
-        let lastCard = cards[cards.length - 1];
         parent.removeChild(firstCard);
         parent.insertBefore(firstCard, lastCard.nextSibling);
     });
